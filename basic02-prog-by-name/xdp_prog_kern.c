@@ -17,6 +17,7 @@
 SEC("xdp")
 int  xdp_pass_func(struct xdp_md *ctx)
 {
+        bpf_printk("Hey Hey passssssss");
 	return XDP_PASS;
 }
 
@@ -27,6 +28,14 @@ int  xdp_drop_func(struct xdp_md *ctx)
 }
 
 /* Assignment#2: Add new XDP program section that use XDP_ABORTED */
+// MY CODE BEGIN
+SEC("xdp")
+int xdp_aborted_func(struct xdp_md *ctx)
+{
+ 
+       return XDP_ABORTED;
+}
+// MY CODE END
 
 char _license[] SEC("license") = "GPL";
 

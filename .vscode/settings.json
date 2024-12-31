@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "bpf_helpers.h": "c",
-        "libxdp_internal.h": "c"
+        "libxdp_internal.h": "c",
+        "common_kern_user.h": "c"
     }
 }

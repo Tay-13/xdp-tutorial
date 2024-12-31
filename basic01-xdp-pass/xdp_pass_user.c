@@ -90,7 +90,7 @@ int main(int argc, char **argv)
 		return EXIT_OK;
 	}
 
-        /* Create an xdp_program froma a BPF ELF object file */
+        /* Create an xdp_program from a BPF ELF object file */
 	prog = xdp_program__create(&xdp_opts);
 	err = libxdp_get_error(prog);
 	if (err) {
